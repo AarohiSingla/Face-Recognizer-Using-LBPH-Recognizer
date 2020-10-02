@@ -9,7 +9,9 @@ cascadePath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath)
 font = cv2.FONT_HERSHEY_SIMPLEX
 id = 0
-names = ['None','asd','aaa'] 
+
+# add the list of names of your dataset here
+names = ['None','Aarohi','Piford','Sorav'] 
 
 # Define min window size to be recognized as a face
 
