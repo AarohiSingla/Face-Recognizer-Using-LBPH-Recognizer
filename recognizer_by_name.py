@@ -1,8 +1,6 @@
 import cv2
 import numpy as np
 
-#pip install opencv-contrib-python
-
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read('model/trained_model2.yml')
 cascadePath = "haarcascade_frontalface_default.xml"
@@ -12,8 +10,6 @@ id = 0
 
 # add the list of names of your dataset here
 names = ['None','Aarohi','Piford','Sorav'] 
-
-# Define min window size to be recognized as a face
 
 
 cam = cv2.VideoCapture(0)
@@ -49,15 +45,7 @@ while True:
                     (255,255,255), 
                     2
                    )
-        cv2.putText(
-                    img, 
-                    str(confidence), 
-                    (x+5,y+h-5), 
-                    font, 
-                    1, 
-                    (255,255,0), 
-                    1
-                   )  
+         
     
     cv2.imshow('camera',img) 
     k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
